@@ -29,6 +29,17 @@
       color: #333;
     }
 
+    .rules {
+      text-align: left;
+      font-size: 14px;
+      color: #555;
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      box-shadow: inset 0px 1px 3px rgba(0,0,0,0.1);
+    }
+
     input[type="text"] {
       width: calc(100% - 20px);
       padding: 10px;
@@ -67,6 +78,19 @@
 <body>
   <div class="calculator">
     <h1>C++ Calculator (WASM)</h1>
+
+    <!-- Rules Section -->
+    <div class="rules">
+      <strong>Rules:</strong>
+      <ol>
+        <li>Expression can contain digits, '+', '-', '(', ')', and spaces.</li>
+        <li>Expression must be valid.</li>
+        <li>'+' cannot be used as a unary operator (i.e., '+1' and '+(2 + 3)' are invalid).</li>
+        <li>'-' can be used as a unary operator (i.e., '-1' and '-(2 + 3)' are valid).</li>
+        <li>No two consecutive operators are allowed.</li>
+      </ol>
+    </div>
+
     <input type="text" id="expression" placeholder="Enter expression (e.g. 1+(2-3))">
     <br>
     <button id="calcBtn">Calculate</button>
