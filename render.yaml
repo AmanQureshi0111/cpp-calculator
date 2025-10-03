@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: cpp-calculator
+    env: docker
+    buildCommand: g++ main.cpp -o calculator -pthread
+    startCommand: ./calculator
+    plan: free
