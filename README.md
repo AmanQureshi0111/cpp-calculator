@@ -1,4 +1,4 @@
-# C++ WebAssembly Calculator
+# ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white) WebAssembly Calculator
 
 A modern web-based calculator powered by **C++** compiled to **WebAssembly (WASM)** using [Emscripten](https://emscripten.org/).  
 This project allows evaluating mathematical expressions entered by the user in a browser interface.
@@ -62,6 +62,7 @@ cpp-calculator/
 ## 🙏 Acknowledgements
 - Emscripten — for enabling C++ to WebAssembly compilation.
 - Inspired by modern web calculators and C++ programming challenges.
+
 
 
 
