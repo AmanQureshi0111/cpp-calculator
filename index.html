@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>C++ Calculator (WASM)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .calculator {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    #result {
+      font-weight: bold;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h1>C++ Calculator (WASM)</h1>
+    <input type="text" id="expression" placeholder="Enter expression (e.g. 1+(2-3))">
+    <br>
+    <button id="calcBtn">Calculate</button>
+    <p>Result: <span id="result"></span></p>
+  </div>
+
+  <script src="calculator.js"></script>
+  <script>
+    let evalExpression;
+
+    Module.onRuntimeInitialized = () => {
+      evalExpression = Module.cwrap("evalExpression", "number", ["string"]);
+
+      document.getElementById("calcBtn").onclick = () => {
+        const expr = document.getElementById("expression").value;
+        const result = evalExpression(expr);
+        document.getElementById("result").innerText = result;
+      };
+    };
+  </script>
+</body>
+</html>
