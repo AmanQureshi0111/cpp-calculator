@@ -35,8 +35,8 @@ This project allows evaluating mathematical expressions entered by the user in a
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/cpp-wasm-calculator.git
-   cd cpp-wasm-calculator
+   git clone https://github.com/AmanQureshi0111/cpp-calculator
+   cd cpp-calculator
 2. Compile C++ to WebAssembly:
    ```
    emcc calculator.cpp -s WASM=1 -s EXPORTED_FUNCTIONS="['_evalExpression']" -s "EXPORTED_RUNTIME_METHODS=['cwrap']" -o calculator.js
@@ -62,5 +62,6 @@ cpp-calculator/
 ## 🙏 Acknowledgements
 - Emscripten — for enabling C++ to WebAssembly compilation.
 - Inspired by modern web calculators and C++ programming challenges.
+
 
 
