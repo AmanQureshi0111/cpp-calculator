@@ -4,6 +4,11 @@ A modern web-based calculator powered by ![C++](https://img.shields.io/badge/C%2
 This project allows evaluating mathematical expressions entered by the user in a browser interface.
 
 ---
+## Live Demo
+
+https://amanqureshi0111.github.io/cpp-calculator/
+
+---
 
 ## 🛠 Features
 
@@ -62,6 +67,7 @@ cpp-calculator/
 ## 🙏 Acknowledgements
 - Emscripten — for enabling ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white) to ![WebAssembly](https://img.shields.io/badge/WebAssembly-654FF0?style=flat&logo=webassembly&logoColor=white) compilation.
 - Inspired by modern web calculators and ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white) programming challenges.
+
 
 
 
